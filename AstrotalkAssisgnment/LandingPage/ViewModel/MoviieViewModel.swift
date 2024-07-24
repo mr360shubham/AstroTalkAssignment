@@ -18,6 +18,7 @@ class MoviieViewModel {
     func fetchMovies(){
         guard let url = URL(string: "https://www.omdbapi.com/?apikey=2c0d1dab&s=dark") else {return}
             
+        
         let task = URLSession.shared.dataTask(with: url){ [weak self] data, response, error in
             guard let data = data else {return}
             do{
